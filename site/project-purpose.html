@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="da">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AIRPORT | Projektets formaal</title>
+  <meta name="description" content="Artikel om formaalet bag AIRPORT-projektet og de centrale forretningssporgsmaal." />
+  <link rel="stylesheet" href="./assets/styles.css" />
+</head>
+<body>
+  <div class="site-shell">
+    <header class="topbar">
+      <a class="brand" href="./index.html">
+        <img src="./assets/airport-logo.png" alt="Airport logo" />
+        <div>
+          <div class="brand-title">AIRPORT</div>
+          <div class="brand-subtitle">Static project journal</div>
+        </div>
+      </a>
+      <nav class="nav-links" aria-label="Hovednavigation">
+        <a href="./index.html">Forside</a>
+        <a class="active" href="./project-purpose.html">Formaal</a>
+        <a href="./architecture-pipeline.html">Arkitektur</a>
+        <a href="./data-model-simulation.html">Datamodel</a>
+        <a href="./power-bi-report.html">Power BI</a>
+        <a href="./technology-repository.html">Teknologi</a>
+      </nav>
+    </header>
+
+    <section class="page-hero">
+      <div class="page-hero-grid">
+        <div>
+          <div class="page-meta">Artikel 01 / Introduktion</div>
+          <h1>Projektets formaal</h1>
+          <p class="lead">
+            AIRPORT er udviklet for at vise, hvordan man kan bygge en trovaerdig data- og
+            rapporteringsloesning under realistiske begraensninger og stadig levere noget, der ligner
+            en rigtig business intelligence-case.
+          </p>
+          <div class="tag-row">
+            <span class="tag">End-to-end</span>
+            <span class="tag">Syntetiske data</span>
+            <span class="tag">Business intelligence</span>
+          </div>
+        </div>
+        <div class="quote-block">
+          Projektet er bygget som en samlet demonstration af datagenerering, ingestion,
+          datamodellering og rapportering. Fokus er ikke kun visualisering, men hele kaeden fra
+          datakilde til beslutningsstoette.
+        </div>
+      </div>
+    </section>
+
+    <div class="article-layout">
+      <article class="article-body">
+        <section>
+          <h2>Hvorfor denne case findes</h2>
+          <p>
+            I mange virkelige projekter har man ikke direkte adgang til komplette driftsdata, og man
+            kan heller ikke bare tage foelsomme passageroplysninger med i et portfolio-projekt.
+            AIRPORT loeser det ved at kombinere eksterne kilder med syntetiske data, saa man stadig
+            kan demonstrere et seriost analyseprodukt.
+          </p>
+          <p>
+            Det centrale maal er derfor todelt: dels at bygge en teknisk pipeline, dels at omsaette
+            den til en rapport, der er let at forstaa for forretningen.
+          </p>
+        </section>
+
+        <section>
+          <h2>De centrale forretningssporgsmaal</h2>
+          <ul>
+            <li>Hvor mange passagerer og afgange bliver haandteret i en given periode?</li>
+            <li>Hvor stor en andel af flyene afgaar rettidigt?</li>
+            <li>Hvordan bevaeger passagererne sig gennem check-in og security?</li>
+            <li>Kommer passagererne gennem security i god tid foer afgang?</li>
+            <li>Hvor godt bliver flyenes saedekapacitet udnyttet?</li>
+            <li>Hvilke selskaber, destinationer og tidspunkter driver belastningen?</li>
+          </ul>
+        </section>
+
+        <section>
+          <h2>Hvad projektet egentlig demonstrerer</h2>
+          <p>
+            Casen viser mere end et paent dashboard. Den viser evnen til at modellere et
+            forretningsproblem, opbygge et datagrundlag, strukturere en database, udvikle maalinger
+            og derefter formidle resultaterne i et overskueligt Power BI-produkt.
+          </p>
+          <p>
+            Det er netop den kombination, der gor projektet interessant som portfolio-case: man ser
+            baade det tekniske fundament og den endelige brugerrettede rapport.
+          </p>
+        </section>
+      </article>
+
+      <aside class="sidebar-column">
+        <div class="sidebar-card">
+          <div class="kicker">Kort fortalt</div>
+          <h3>Tre hovedmaal</h3>
+          <ul>
+            <li>Skabe et realistisk analysegrundlag uden produktionsdata</li>
+            <li>Bygge en genkoerbar pipeline fra data til rapport</li>
+            <li>Formidle operationelle indsigter i Power BI</li>
+          </ul>
+        </div>
+
+        <div class="sidebar-card">
+          <div class="kicker">Videre laesning</div>
+          <p>Naeste artikel gaar ind i arkitektur, ETL-services og dataflowet bag loesningen.</p>
+          <div class="button-row">
+            <a class="button button-primary" href="./architecture-pipeline.html">Laes arkitekturen</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="da">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AIRPORT | Data- og rapporteringsprojekt</title>
+  <meta name="description" content="Static HTML projektsite for AIRPORT-casen med flere artikelsider om formaal, arkitektur, datamodel og Power BI." />
+  <link rel="stylesheet" href="./assets/styles.css" />
+</head>
+<body>
+  <div class="site-shell">
+    <header class="topbar">
+      <a class="brand" href="./index.html">
+        <img src="./assets/airport-logo.png" alt="Airport logo" />
+        <div>
+          <div class="brand-title">AIRPORT</div>
+          <div class="brand-subtitle">Static project journal</div>
+        </div>
+      </a>
+      <nav class="nav-links" aria-label="Hovednavigation">
+        <a class="active" href="./index.html">Forside</a>
+        <a href="./project-purpose.html">Formaal</a>
+        <a href="./architecture-pipeline.html">Arkitektur</a>
+        <a href="./data-model-simulation.html">Datamodel</a>
+        <a href="./power-bi-report.html">Power BI</a>
+        <a href="./technology-repository.html">Teknologi</a>
+      </nav>
+    </header>
+
+    <section class="hero">
+      <div class="hero-grid">
+        <div>
+          <div class="eyebrow">Airport Case / GitHub Pages / Static HTML</div>
+          <h1>Et mere redaktionelt projektsite for AIRPORT</h1>
+          <p class="lead">
+            Denne version af projektet er bygget som et lille statisk website, hvor hver hoveddel af
+            casen bliver fortalt som sin egen artikel. Det giver en roligere laeseoplevelse end en
+            enkelt lang side og ligger visuelt taettere pa rapportens struktur.
+          </p>
+          <div class="button-row">
+            <a class="button button-primary" href="./project-purpose.html">Start med projektet</a>
+            <a class="button button-secondary" href="./assets/airport-project-report.pdf">Aabn rapporten</a>
+          </div>
+          <div class="hero-note">
+            Projektet kombinerer simulerede passagerdata, eksterne flydata, PostgreSQL,
+            Power BI og Tabular Editor i en samlet end-to-end leverance.
+          </div>
+        </div>
+
+        <div class="visual-card">
+          <div class="visual-header">
+            <img src="./assets/airport-logo.png" alt="Airport logo" />
+            <div>
+              <strong style="display:block; color:#15284b;">AIRPORT Power BI Demo</strong>
+              <span>Operationelt overblik, passagerflow og kapacitetsudnyttelse</span>
+            </div>
+          </div>
+          <img src="./assets/pbi-page-1.png" alt="Power BI oversigt" />
+        </div>
+      </div>
+
+      <div class="stats-grid">
+        <div class="stat-card">
+          <strong>4</strong>
+          <span>ETL-services i Docker</span>
+        </div>
+        <div class="stat-card">
+          <strong>3</strong>
+          <span>Rapportsider i Power BI</span>
+        </div>
+        <div class="stat-card">
+          <strong>6</strong>
+          <span>Centrale datatabeller og referenceflader</span>
+        </div>
+        <div class="stat-card">
+          <strong>E2E</strong>
+          <span>Fra datakilde til beslutningsstoette</span>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-panel">
+      <div class="section-header">
+        <div class="kicker">Laes som artikler</div>
+        <h2>Hver sektion har sin egen side</h2>
+        <p class="lead">
+          I stedet for at presse alt ind pa en enkelt page, er AIRPORT nu opdelt i selvstaendige
+          artikelsider. Det gor indholdet lettere at laese, mere redaktionelt og mere egnet til
+          GitHub Pages som portefoljesite.
+        </p>
+      </div>
+
+      <div class="article-list">
+        <a class="article-card" href="./project-purpose.html">
+          <img src="./assets/airport-logo.png" alt="Projektets formaal" />
+          <div>
+            <div class="meta">Artikel 01</div>
+            <h3>Projektets formaal og forretningssporgsmaal</h3>
+            <p>
+              Introduktion til casen, maalet med projektet og de operationelle sporgsmaal loesningen
+              er designet til at besvare.
+            </p>
+          </div>
+        </a>
+
+        <a class="article-card" href="./architecture-pipeline.html">
+          <img src="./assets/pbi-page-1.png" alt="Arkitektur og pipeline" />
+          <div>
+            <div class="meta">Artikel 02</div>
+            <h3>Arkitektur, ETL og den tekniske pipeline</h3>
+            <p>
+              Gennemgang af dataflowet fra simulation og ingestion til tabeller, views og genkoerbare
+              services i Docker.
+            </p>
+          </div>
+        </a>
+
+        <a class="article-card" href="./data-model-simulation.html">
+          <img src="./assets/pbi-page-2.png" alt="Datamodel og simulation" />
+          <div>
+            <div class="meta">Artikel 03</div>
+            <h3>Datamodel, syntetiske data og analyseklar struktur</h3>
+            <p>
+              Hvordan flights, passports, tickets og referencefiler bliver koblet til et plausibelt
+              analyseunivers.
+            </p>
+          </div>
+        </a>
+
+        <a class="article-card" href="./power-bi-report.html">
+          <img src="./assets/pbi-page-3.png" alt="Power BI-rapporten" />
+          <div>
+            <div class="meta">Artikel 04</div>
+            <h3>Power BI-rapporten og de tre dashboardsider</h3>
+            <p>
+              Et redaktionelt overblik over siderne for overblik, passagerflow og kapacitetsudnyttelse.
+            </p>
+          </div>
+        </a>
+
+        <a class="article-card" href="./technology-repository.html">
+          <img src="./assets/pbi-page-1.png" alt="Teknologier og repository" />
+          <div>
+            <div class="meta">Artikel 05</div>
+            <h3>Teknologier, repository-struktur og hvad projektet demonstrerer</h3>
+            <p>
+              Oversigt over stack, repository-opbygning og hvorfor casen er et staerkt end-to-end
+              eksempel.
+            </p>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    <section class="section-panel plain">
+      <div class="section-header">
+        <div class="kicker">Projektets kerne</div>
+        <h2>Hvad AIRPORT i praksis viser</h2>
+      </div>
+
+      <div class="story-grid">
+        <article class="story-card">
+          <span class="story-index">01</span>
+          <h3>Realistisk case uden produktionstal</h3>
+          <p>
+            Projektet er udviklet uden adgang til interne systemer og uden rigtige passagerdata, men
+            stadig med ambitionen om at ligne en virkelig airport-leverance.
+          </p>
+        </article>
+        <article class="story-card">
+          <span class="story-index">02</span>
+          <h3>Simulation som analytisk fundament</h3>
+          <p>
+            Syntetiske passagerer, billetter og timing bruges bevidst for at kunne vise plausible
+            moenstre uden at arbejde med foelsomme data.
+          </p>
+        </article>
+        <article class="story-card">
+          <span class="story-index">03</span>
+          <h3>BI som fuld leverance</h3>
+          <p>
+            Power BI er kun sidste led. Under overfladen ligger der ingestion, datamodellering, DAX,
+            semantisk model og versionsstyret struktur.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="footer-cta">
+      <div>
+        <div class="kicker">Naeste skridt</div>
+        <h2>Laes videre som et lille projektmagasin</h2>
+        <p>
+          Start med formaalet, gaa videre til pipeline og datamodel, og slut med rapporten og den
+          tekniske stack.
+        </p>
+      </div>
+      <div class="button-row">
+        <a class="button button-primary" href="./project-purpose.html">Laes artikel 01</a>
+        <a class="button button-secondary" href="https://github.com/AbrahimBorgiPrivat/AIRPORT">Aabn GitHub</a>
+      </div>
+    </section>
+  </div>
+</body>
+</html>

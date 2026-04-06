@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="da">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>AIRPORT | Datamodel og simulation</title>
+  <meta name="description" content="Artikel om datamodellen, de syntetiske data og analysegrundlaget i AIRPORT." />
+  <link rel="stylesheet" href="./assets/styles.css" />
+</head>
+<body>
+  <div class="site-shell">
+    <header class="topbar">
+      <a class="brand" href="./index.html">
+        <img src="./assets/airport-logo.png" alt="Airport logo" />
+        <div>
+          <div class="brand-title">AIRPORT</div>
+          <div class="brand-subtitle">Static project journal</div>
+        </div>
+      </a>
+      <nav class="nav-links" aria-label="Hovednavigation">
+        <a href="./index.html">Forside</a>
+        <a href="./project-purpose.html">Formaal</a>
+        <a href="./architecture-pipeline.html">Arkitektur</a>
+        <a class="active" href="./data-model-simulation.html">Datamodel</a>
+        <a href="./power-bi-report.html">Power BI</a>
+        <a href="./technology-repository.html">Teknologi</a>
+      </nav>
+    </header>
+
+    <section class="page-hero">
+      <div class="page-hero-grid">
+        <div>
+          <div class="page-meta">Artikel 03 / Datagrundlag</div>
+          <h1>Datamodel og syntetiske data</h1>
+          <p class="lead">
+            Den analytiske styrke i AIRPORT kommer fra maaden flights, passports, tickets og reference-
+            data er koblet sammen. Datamodellen er enkel nok til at vaere overskuelig, men realistisk
+            nok til at understoette meningsfulde KPI'er.
+          </p>
+        </div>
+        <div class="visual-card">
+          <img src="./assets/pbi-page-2.png" alt="Passagerflow og tidsmoenstre" />
+        </div>
+      </div>
+    </section>
+
+    <div class="article-layout">
+      <article class="article-body">
+        <section>
+          <h2>Hvorfor syntetiske data er et godt valg her</h2>
+          <p>
+            Billet- og passagerdata er ikke hentet fra virkelige passagerer. I stedet bliver de
+            genereret syntetisk ud fra antagelser og fordelinger, der skal afspejle plausible
+            airport-moenstre.
+          </p>
+          <p>
+            Det giver et sikkert og kontrolleret miljoe, hvor man kan demonstrere timing, kapacitet
+            og passagerflow uden at kompromittere fortrolige oplysninger.
+          </p>
+        </section>
+
+        <section>
+          <h2>De centrale tabeller</h2>
+          <div class="info-grid two">
+            <div class="info-card">
+              <h3><code>PASSPORTS</code></h3>
+              <p>Simulerede passagerer med pasnummer, navn og nationalitet.</p>
+            </div>
+            <div class="info-card">
+              <h3><code>FLIGHTS</code></h3>
+              <p>Afgange med status, tider, gate, terminal, destination og flytype.</p>
+            </div>
+            <div class="info-card">
+              <h3><code>FLIGHT_TICKETS</code></h3>
+              <p>Billetkobling mellem passager og fly med saede, check-in-type og tidsstempler.</p>
+            </div>
+            <div class="info-card">
+              <h3><code>AIRCRAFT_MODELS</code></h3>
+              <p>Flymetadata som saeder, producent, motor, raekkevidde og kodevaerdier.</p>
+            </div>
+            <div class="info-card">
+              <h3><code>AIRPORTS</code></h3>
+              <p>Referenceoplysninger om destinationer og lufthavne.</p>
+            </div>
+            <div class="info-card">
+              <h3><code>DATEVIEW</code></h3>
+              <p>Datodimension til trendanalyse og filtrering over tid.</p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2>Hvordan simulationen giver mening</h2>
+          <ul>
+            <li>Passagerer faar realistiske pasnumre, navne og lande</li>
+            <li>Belaegningsgrader varierer efter ugedag og tidspunkt</li>
+            <li>Check-in modelleres som enten <code>online</code> eller <code>onsite</code></li>
+            <li>Security-tider placeres i relation til check-in og planlagt afgang</li>
+            <li>Billetter kobles til flyenes kapacitet via flymodellerne</li>
+          </ul>
+          <p>
+            Resultatet er et sammenhaengende datagrundlag, der kan bruges til at maale baade
+            passageradfaerd og operationel performance.
+          </p>
+        </section>
+      </article>
+
+      <aside class="sidebar-column">
+        <div class="sidebar-card">
+          <div class="kicker">Noegleide</div>
+          <p>
+            Datamodellen er ikke kun lavet for at gemme data. Den er lavet for at kunne svare pa de
+            spoergsmaal, rapporten skal bruge.
+          </p>
+        </div>
+        <div class="sidebar-card">
+          <div class="kicker">Naeste artikel</div>
+          <p>Nu giver det mening at kigge pa selve rapporten og hvordan KPI'erne bliver praesenteret.</p>
+          <div class="button-row">
+            <a class="button button-primary" href="./power-bi-report.html">Laes Power BI-delen</a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </div>
+</body>
+</html>

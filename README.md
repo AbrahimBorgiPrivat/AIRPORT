@@ -30,8 +30,12 @@ AIRPORT/
 
 Project page for GitHub Pages:
 
-- [Project page](docs/index.md)
+- [Static site source](site/index.html)
 - [Project report PDF](docs/Abrahim_Borgi_AIRPORT_Simulation_Project.pdf)
+
+GitHub Pages deploy is configured through:
+
+- `.github/workflows/pages.yml`
 
 Install the shared Python dependencies:
 
