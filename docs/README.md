@@ -1,39 +1,61 @@
-# Airport Documentation
+# AIRPORT Dokumentation
 
-This folder contains the standalone Airport project notes and exported project material.
+Denne mappe samler projektets skriftlige materiale og fungerer som indgang til rapporten og den øvrige dokumentation.
 
-The GitHub Pages site is now maintained separately in `site/`, with pages under `site/html/`,
-reusable styles under `site/css/`, and deployment handled by GitHub Actions.
+## Indhold
 
-## Project Layout
+- `Abrahim_Borgi_AIRPORT_Simulation_Project.pdf`
+  den samlede projektrapport
+- `README.md`
+  denne oversigt over dokumentationsmaterialet
 
-```text
-AIRPORT/
-|-- docs/
-|-- res/
-|   |-- json/
-|   `-- pbi/
-`-- src/
-    |-- code/
-    |   |-- libraries/
-    |   |-- runtime_definitions/
-    |   `-- service/
-    `-- workspace-serve/
-```
+## Formål
 
-## Main Areas
+AIRPORT er bygget som en samlet case, der viser:
 
-- `res/json` contains JSON source data used by the Airport ETL flows
-- `res/pbi` contains Power BI images, themes, and static assets
-- `src/code/runtime_definitions/api_to_client` defines the API ingestion jobs
-- `src/code/runtime_definitions/json_to_client` defines JSON ingestion jobs
-- `src/code/runtime_definitions/create_table_and_views` defines schema/table/view SQL jobs
-- `src/code/runtime_definitions/simulations` defines the Airport simulation jobs
-- `src/code/service/etl` contains the Docker-based ETL services
-- `src/workspace-serve/SemanticModel` contains the PBIP/TMDL model
-- `src/workspace-serve/Tabular` contains Tabular Editor scripts
+- hvordan syntetiske og eksterne data kan kombineres
+- hvordan en ETL-pipeline kan struktureres og genkøres
+- hvordan en relationel datamodel kan understøtte analyser
+- hvordan resultaterne kan formidles i Power BI
 
-## Database Note
+Projektet spænder derfor over både data engineering, modellering og rapportering.
 
-This standalone repo still targets the same database setup as the shared workspace.
-Schema and database references like `cph_airport` are intentionally unchanged.
+## Rapportens fokus
+
+Rapporten og den tilhørende løsning er bygget omkring tre hovedområder:
+
+### 1. Overblik
+
+Et samlet overblik over passagerer, fly, punctualitet, destinationer og aktivitetsniveau.
+
+![Power BI side 1](../res/pbi/img/PBIPage1.png)
+
+### 2. Passagerflow
+
+Analyse af check-in, security og timing frem mod afgang.
+
+![Power BI side 2](../res/pbi/img/PBIPage2.png)
+
+### 3. Kapacitet
+
+Analyse af sædeudnyttelse, belægningsgrad og forskelle på tværs af flytyper og selskaber.
+
+![Power BI side 3](../res/pbi/img/PBIPage3.png)
+
+## Relaterede dele af repository'et
+
+- `site/`
+  GitHub Pages-sitet med HTML-sider og genanvendelige CSS-filer
+- `src/code/runtime_definitions/`
+  definitioner for ingestion, simulation og SQL-jobs
+- `src/code/service/etl/`
+  de kørbare ETL-services
+- `src/workspace-serve/SemanticModel/`
+  PBIP-projekt og semantisk model
+- `src/workspace-serve/Tabular/`
+  Tabular Editor-scripts og DAX-assets
+
+## Links
+
+- [Tilbage til projektets README](../README.md)
+- [Åbn PDF-rapporten](./Abrahim_Borgi_AIRPORT_Simulation_Project.pdf)

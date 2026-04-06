@@ -1,73 +1,105 @@
-# Airport
+# AIRPORT
 
-Standalone Airport simulation, ETL, and reporting project extracted from the shared `DATA PROJECTS` workspace.
+Et end-to-end data- og rapporteringsprojekt, der simulerer centrale dele af en lufthavns operationelle datagrundlag og omsætter det til analyser i Power BI.
 
-The repository includes:
+## Formål
 
-- API ingestion services for airport and flight data
-- JSON-to-database ingestion for aircraft model reference data
-- SQL-driven table and view creation jobs
-- Airport simulation services for passports and flight tickets
-- Power BI and Tabular Editor assets
-- Shared Python libraries required by the Airport services
+Projektet er udviklet for at demonstrere, hvordan man kan bygge en realistisk BI-løsning, selv når der ikke er adgang til interne systemer eller rigtige passagerdata.
 
-## Structure
+Løsningen samler derfor:
+
+- syntetiske passager- og billetdata
+- eksterne fly- og lufthavnsdata
+- referencefiler for flymodeller
+- en relationel datamodel i PostgreSQL
+- en Power BI-rapport med KPI'er og interaktive dashboards
+
+Målet er ikke kun at vise dashboards, men hele kæden fra datakilde til beslutningsstøtte.
+
+## Hvad projektet indeholder
+
+- Python-baserede simulationer af passagerer, billetter, check-in og security-flow
+- ETL-services til API-ingestion, JSON-indlæsning og SQL-baseret tabel/view-opbygning
+- runtime-definitioner til genkørbare dataloads
+- PBIP-projekt, semantisk model og Tabular Editor-assets
+- et statisk GitHub Pages-site bygget med HTML/CSS og deployet via GitHub Actions
+
+## Power BI-rapport
+
+Rapporten er opdelt i tre hovedsider:
+
+1. `Overblik`
+2. `Passagerflow`
+3. `Kapacitet`
+
+### Overblik
+
+Første side samler de vigtigste KPI'er om passagerer, fly, punctualitet, destinationer og belastning over tid.
+
+![Power BI side 1](res/pbi/img/PBIPage1.png)
+
+### Passagerflow
+
+Anden side fokuserer på check-in, security og passagerernes timing frem mod afgang.
+
+![Power BI side 2](res/pbi/img/PBIPage2.png)
+
+### Kapacitet
+
+Tredje side viser, hvordan sædekapacitet og belægningsgrad udvikler sig på tværs af fly, selskaber og områder.
+
+![Power BI side 3](res/pbi/img/PBIPage3.png)
+
+## Projektstruktur
 
 ```text
 AIRPORT/
 |-- docs/
 |-- res/
+|   |-- json/
+|   `-- pbi/
+|-- site/
+|   |-- assets/
+|   |-- css/
+|   `-- html/
 |-- src/
 |   |-- code/
 |   |   |-- libraries/
 |   |   |-- runtime_definitions/
 |   |   `-- service/
 |   `-- workspace-serve/
-`-- .gitignore
+`-- README.md
 ```
 
-## Quick Start
+## Centrale mapper
 
-Project page for GitHub Pages:
+- `docs/` indeholder rapport og supplerende dokumentation
+- `res/` indeholder referencefiler, billeder og Power BI-assets
+- `site/` indeholder GitHub Pages-sitet
+- `src/code/` indeholder ETL-logik, runtime-definitioner og services
+- `src/workspace-serve/` indeholder Power BI-, semantic model- og Tabular-assets
 
-- [Pages entrypoint](site/index.html)
-- [HTML pages](site/html/index.html)
-- [Reusable CSS](site/css/base.css)
-- [Project report PDF](docs/Abrahim_Borgi_AIRPORT_Simulation_Project.pdf)
+## GitHub Pages
 
-GitHub Pages deploy is configured through:
+Projektets statiske site ligger i `site/`:
 
-- `.github/workflows/pages.yml`
+- `site/index.html` er Pages-entrypoint
+- `site/html/` indeholder de enkelte sider
+- `site/css/` indeholder genanvendelige stylesheets
+- `.github/workflows/pages.yml` deployer sitet til GitHub Pages
 
-Install the shared Python dependencies:
+## Rapport og dokumentation
 
-```powershell
-pip install -r src\code\libraries\requirements.txt
-```
+- [Projektets PDF-rapport](docs/Abrahim_Borgi_AIRPORT_Simulation_Project.pdf)
+- [Dokumentationsoversigt](docs/README.md)
 
-Run a service from its folder, for example:
+## Teknologi
 
-```powershell
-cd src\code\service\etl\service_api_to_client
-docker compose up --build
-```
-
-The standalone repo now uses direct local paths:
-
-- `res/json`
-- `src/code/runtime_definitions/api_to_client`
-- `src/code/runtime_definitions/json_to_client`
-- `src/code/runtime_definitions/create_table_and_views`
-- `src/code/runtime_definitions/simulations`
-
-## Database
-
-This repo still targets the same Airport database setup as the shared workspace, including the `cph_airport` schema and existing environment variable pattern.
-
-## Power BI And Tabular
-
-- PBIP and semantic model files live in `src/workspace-serve/SemanticModel`
-- Tabular automation scripts live in `src/workspace-serve/Tabular`
-- The helper C# project lives in `src/workspace-serve/TabularEditorCLITool`
-
-See `docs/README.md` for the compact project map.
+- Python
+- Docker
+- PostgreSQL
+- SQL
+- Power BI
+- Tabular Editor 2
+- GitHub Actions
+- Static HTML/CSS
