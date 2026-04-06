@@ -5,13 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>AIRPORT | Arkitektur og pipeline</title>
   <meta name="description" content="Artikel om AIRPORT-projektets ETL-arkitektur, Docker-services og dataflow." />
-  <link rel="stylesheet" href="./assets/styles.css" />
+  <link rel="stylesheet" href="../css/base.css" />
+  <link rel="stylesheet" href="../css/layout.css" />
+  <link rel="stylesheet" href="../css/blocks.css" />
 </head>
 <body>
   <div class="site-shell">
     <header class="topbar">
       <a class="brand" href="./index.html">
-        <img src="./assets/airport-logo.png" alt="Airport logo" />
+        <img src="../assets/airport-logo.png" alt="Airport logo" />
         <div>
           <div class="brand-title">AIRPORT</div>
           <div class="brand-subtitle">Static project journal</div>
@@ -19,7 +21,7 @@
       </a>
       <nav class="nav-links" aria-label="Hovednavigation">
         <a href="./index.html">Forside</a>
-        <a href="./project-purpose.html">Formaal</a>
+        <a href="./project-purpose.html">Formål</a>
         <a class="active" href="./architecture-pipeline.html">Arkitektur</a>
         <a href="./data-model-simulation.html">Datamodel</a>
         <a href="./power-bi-report.html">Power BI</a>
@@ -31,15 +33,15 @@
       <div class="page-hero-grid">
         <div>
           <div class="page-meta">Artikel 02 / Arkitektur</div>
-          <h1>Pipeline og ETL</h1>
+          <h1>Arkitektur og ETL</h1>
           <p class="lead">
             AIRPORT er bygget som en modulariseret pipeline, hvor simulation, ingestion, tabeloprettelse
-            og rapportforberedelse er opdelt i hver deres lag. Det gor loesningen baade mere overskuelig
-            og lettere at genkoere.
+            og rapportforberedelse er opdelt i hver deres lag. Det gør løsningen både mere overskuelig
+            og lettere at genkøre.
           </p>
         </div>
         <div class="visual-card">
-          <img src="./assets/pbi-page-1.png" alt="Overblik over projektet" />
+          <img src="../assets/etl.png" alt="ETL-flow for AIRPORT-projektet" />
         </div>
       </div>
     </section>
@@ -47,40 +49,47 @@
     <div class="article-layout">
       <article class="article-body">
         <section>
-          <h2>Tre typer datakilder</h2>
+          <h2>Datakilder</h2>
           <p>Projektet samler data fra tre forskellige kildetyper:</p>
           <ul>
             <li>Python-baserede simulationer af passagerer, billetter og tidspunkter</li>
-            <li>API-indlaesning af historiske flyafgange og lufthavnsmetadata</li>
+            <li>API-indlæsning af historiske flyafgange og lufthavnsmetadata</li>
             <li>JSON-referencefiler med flymodeller og kapacitetsoplysninger</li>
           </ul>
           <p>
             Tilsammen giver det et analyseunivers, hvor syntetiske og eksterne data spiller sammen.
           </p>
+          <div class="dashboard-card" style="margin-top:16px;">
+            <img src="../assets/etl.png" alt="ETL-illustration med simulationer, API, JSON, PostgreSQL og Power BI" />
+            <div class="figure-caption">
+              ETL-diagrammet viser, hvordan simulationer, API-data og JSON-referencefiler samles i PostgreSQL
+              og derefter bruges i Power BI-rapporteringen.
+            </div>
+          </div>
         </section>
 
         <section>
-          <h2>Fire services med tydelige roller</h2>
+          <h2>Services</h2>
           <div class="timeline">
             <div class="timeline-item">
               <strong class="badge">1</strong>
               <div>
                 <h3><code>service_api_to_client</code></h3>
-                <p>Henter eksterne API-data og laegger dem i databasen via runtime-styret ingestion.</p>
+                <p>Henter eksterne API-data og lægger dem i databasen via runtime-styret ingestion.</p>
               </div>
             </div>
             <div class="timeline-item">
               <strong class="badge">2</strong>
               <div>
                 <h3><code>service_json_to_client</code></h3>
-                <p>Indlaeser referencefiler, eksempelvis flymodeller og deres egenskaber.</p>
+                <p>Indlæser referencefiler, eksempelvis flymodeller og deres egenskaber.</p>
               </div>
             </div>
             <div class="timeline-item">
               <strong class="badge">3</strong>
               <div>
                 <h3><code>service_create_table_views_from_sql</code></h3>
-                <p>Opretter schema, tabeller og views via SQL, saa modellen er konsistent og klar.</p>
+                <p>Opretter schema, tabeller og views via SQL, så modellen er konsistent og klar.</p>
               </div>
             </div>
             <div class="timeline-item">
@@ -94,14 +103,14 @@
         </section>
 
         <section>
-          <h2>Hvorfor den struktur fungerer</h2>
+          <h2>Hvorfor det virker</h2>
           <p>
             Ved at skille runtime-definitioner, Python-biblioteker og services fra hinanden bliver
             projektet lettere at vedligeholde. Det betyder, at logik kan genbruges, mens forskellige
             jobs stadig kan konfigureres individuelt.
           </p>
           <p>
-            Upsert-logikken betyder samtidig, at loesningen er bygget til at blive koert igen, uden
+            Upsert-logikken betyder samtidig, at løsningen er bygget til at blive kørt igen, uden
             at data bare bliver duplikeret ukontrolleret.
           </p>
         </section>
@@ -109,7 +118,7 @@
 
       <aside class="sidebar-column">
         <div class="sidebar-card">
-          <div class="kicker">Arkitektur i korte traek</div>
+          <div class="kicker">Arkitektur i korte træk</div>
           <ul>
             <li>Modulopdelt ingestion</li>
             <li>Runtime-styrede jobs</li>
@@ -118,10 +127,10 @@
           </ul>
         </div>
         <div class="sidebar-card">
-          <div class="kicker">Naeste artikel</div>
-          <p>Naeste del gaar fra pipeline til selve datamodellen og den syntetiske logik bag tallene.</p>
+          <div class="kicker">Næste artikel</div>
+          <p>Næste del går fra pipeline til selve datamodellen og den syntetiske logik bag tallene.</p>
           <div class="button-row">
-            <a class="button button-primary" href="./data-model-simulation.html">Laes datamodel</a>
+            <a class="button button-primary" href="./data-model-simulation.html">Læs datamodel</a>
           </div>
         </div>
       </aside>

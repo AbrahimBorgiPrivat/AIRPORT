@@ -2,7 +2,8 @@
 
 This folder contains the standalone Airport project notes and exported project material.
 
-The GitHub Pages site is now maintained separately in `site/` and deployed with GitHub Actions.
+The GitHub Pages site is now maintained separately in `site/`, with pages under `site/html/`,
+reusable styles under `site/css/`, and deployment handled by GitHub Actions.
 
 ## Project Layout
 

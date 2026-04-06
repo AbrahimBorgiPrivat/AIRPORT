@@ -30,7 +30,9 @@ AIRPORT/
 
 Project page for GitHub Pages:
 
-- [Static site source](site/index.html)
+- [Pages entrypoint](site/index.html)
+- [HTML pages](site/html/index.html)
+- [Reusable CSS](site/css/base.css)
 - [Project report PDF](docs/Abrahim_Borgi_AIRPORT_Simulation_Project.pdf)
 
 GitHub Pages deploy is configured through:
