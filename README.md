@@ -2,6 +2,11 @@
 
 Et end-to-end data- og rapporteringsprojekt, der simulerer centrale dele af en lufthavns operationelle datagrundlag og omsætter det til analyser i Power BI.
 
+<p>
+  <a href="https://abrahimborgiprivat.github.io/AIRPORT/html/index.html"><strong>Åbn GitHub Pages-sitet</strong></a><br />
+  Se projektet som et statisk website med artikelsider om formål, arkitektur, datamodel, Power BI og teknologi.
+</p>
+
 ## Formål
 
 Projektet er udviklet for at demonstrere, hvordan man kan bygge en realistisk BI-løsning, selv når der ikke er adgang til interne systemer eller rigtige passagerdata.
@@ -32,23 +37,18 @@ Rapporten er opdelt i tre hovedsider:
 2. `Passagerflow`
 3. `Kapacitet`
 
-### Overblik
-
-Første side samler de vigtigste KPI'er om passagerer, fly, punctualitet, destinationer og belastning over tid.
-
-![Power BI side 1](res/pbi/img/PBIPage1.png)
-
-### Passagerflow
-
-Anden side fokuserer på check-in, security og passagerernes timing frem mod afgang.
-
-![Power BI side 2](res/pbi/img/PBIPage2.png)
-
-### Kapacitet
-
-Tredje side viser, hvordan sædekapacitet og belægningsgrad udvikler sig på tværs af fly, selskaber og områder.
-
-![Power BI side 3](res/pbi/img/PBIPage3.png)
+<table>
+  <tr>
+    <td align="center"><strong>Overblik</strong></td>
+    <td align="center"><strong>Passagerflow</strong></td>
+    <td align="center"><strong>Kapacitet</strong></td>
+  </tr>
+  <tr>
+    <td><img src="res/pbi/img/PBIPage1.png" alt="Power BI side 1" width="100%" /></td>
+    <td><img src="res/pbi/img/PBIPage2.png" alt="Power BI side 2" width="100%" /></td>
+    <td><img src="res/pbi/img/PBIPage3.png" alt="Power BI side 3" width="100%" /></td>
+  </tr>
+</table>
 
 ## Projektstruktur
 

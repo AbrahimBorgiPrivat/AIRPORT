@@ -2,6 +2,11 @@
 
 Denne mappe samler projektets skriftlige materiale og fungerer som indgang til rapporten og den øvrige dokumentation.
 
+<p>
+  <a href="https://abrahimborgiprivat.github.io/AIRPORT/html/index.html"><strong>Åbn GitHub Pages-sitet</strong></a><br />
+  Se den samlede projektpræsentation som et statisk website med separate sider for de vigtigste emner.
+</p>
+
 ## Indhold
 
 - `Abrahim_Borgi_AIRPORT_Simulation_Project.pdf`
@@ -24,23 +29,18 @@ Projektet spænder derfor over både data engineering, modellering og rapporteri
 
 Rapporten og den tilhørende løsning er bygget omkring tre hovedområder:
 
-### 1. Overblik
-
-Et samlet overblik over passagerer, fly, punctualitet, destinationer og aktivitetsniveau.
-
-![Power BI side 1](../res/pbi/img/PBIPage1.png)
-
-### 2. Passagerflow
-
-Analyse af check-in, security og timing frem mod afgang.
-
-![Power BI side 2](../res/pbi/img/PBIPage2.png)
-
-### 3. Kapacitet
-
-Analyse af sædeudnyttelse, belægningsgrad og forskelle på tværs af flytyper og selskaber.
-
-![Power BI side 3](../res/pbi/img/PBIPage3.png)
+<table>
+  <tr>
+    <td align="center"><strong>Overblik</strong></td>
+    <td align="center"><strong>Passagerflow</strong></td>
+    <td align="center"><strong>Kapacitet</strong></td>
+  </tr>
+  <tr>
+    <td><img src="../res/pbi/img/PBIPage1.png" alt="Power BI side 1" width="100%" /></td>
+    <td><img src="../res/pbi/img/PBIPage2.png" alt="Power BI side 2" width="100%" /></td>
+    <td><img src="../res/pbi/img/PBIPage3.png" alt="Power BI side 3" width="100%" /></td>
+  </tr>
+</table>
 
 ## Relaterede dele af repository'et
 
