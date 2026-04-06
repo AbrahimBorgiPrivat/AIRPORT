@@ -28,6 +28,11 @@ AIRPORT/
 
 ## Quick Start
 
+Project page for GitHub Pages:
+
+- [Project page](docs/index.md)
+- [Project report PDF](docs/Abrahim_Borgi_AIRPORT_Simulation_Project.pdf)
+
 Install the shared Python dependencies:
 
 ```powershell
