@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>AIRPORT | Teknologier og repository</title>
-  <meta name="description" content="Artikel om teknologistakken, repository-opbygningen og hvorfor AIRPORT er en stærk portfolio-case." />
+  <title>AIRPORT | Repository</title>
+  <meta name="description" content="Teknologi og repository-struktur for AIRPORT-projektet." />
   <link rel="stylesheet" href="../css/base.css" />
   <link rel="stylesheet" href="../css/layout.css" />
   <link rel="stylesheet" href="../css/blocks.css" />
@@ -16,116 +16,80 @@
         <img src="../assets/airport-logo.png" alt="Airport logo" />
         <div>
           <div class="brand-title">AIRPORT</div>
-          <div class="brand-subtitle">Static project journal</div>
+          <div class="brand-subtitle">Data og rapportering</div>
         </div>
       </a>
-      <nav class="nav-links" aria-label="Hovednavigation">
-        <a href="./index.html">Forside</a>
-        <a href="./project-purpose.html">Formål</a>
-        <a href="./architecture-pipeline.html">Arkitektur</a>
-        <a href="./data-model-simulation.html">Datamodel</a>
-        <a href="./power-bi-report.html">Power BI</a>
-        <a class="active" href="./technology-repository.html">Teknologi</a>
-      </nav>
+      <div class="topbar-actions">
+        <a class="topbar-link" href="https://abrahimborgiprivat.github.io/Cirkle-K/html/index.html" target="_blank" rel="noreferrer">Circle K</a>
+        <img class="profile-avatar" src="../assets/AbrahimProfilePicture.jpg" alt="Abrahim profile" />
+      </div>
     </header>
 
-    <section class="page-hero">
-      <div class="page-hero-grid">
-        <div>
-          <div class="page-meta">Artikel 05 / Stack og struktur</div>
-          <h1>Teknologi</h1>
-          <p class="lead">
-            AIRPORT er stærk som case, fordi hele løsningen ligger samlet i et repository:
-            kode, runtime-definitioner, SQL, PBIP, semantisk model, DAX og dokumentation.
+    <div class="page-layout">
+      <aside class="side-menu">
+        <h2 class="side-menu-title">Menu</h2>
+        <nav class="side-nav" aria-label="Hovednavigation">
+          <a class="topbar-link" href="./index.html">Forside</a>
+          <a class="topbar-link" href="./project-purpose.html">Formål</a>
+          <a class="topbar-link" href="./architecture-pipeline.html">Pipeline</a>
+          <a class="topbar-link" href="./data-model-simulation.html">Datamodel</a>
+          <a class="topbar-link" href="./power-bi-report.html">Power BI</a>
+          <a class="topbar-link active" href="./technology-repository.html">Repository</a>
+        </nav>
+      </aside>
+
+      <main class="content-column">
+        <section class="page-hero">
+          <div class="page-meta">Repository</div>
+          <p class="lead">Kode, runtime-definitioner, services og BI-workspace i samme repo.</p>
+          <p>
+            AIRPORT er stærk som portfolio-case, fordi både data engineering, modellering og rapportering
+            ligger samlet i én struktur, der kan læses og genbruges.
           </p>
-        </div>
-        <div class="quote-block">
-          Når både data engineering, modellering og BI-formidling er samlet i samme leverance,
-          bliver projektet nemmere at vurdere som reel end-to-end kompetence.
-        </div>
-      </div>
-    </section>
 
-    <div class="article-layout">
-      <article class="article-body">
-        <section>
-          <h2>Stack</h2>
-          <div class="info-grid three">
-            <div class="info-card">
-              <h3>Python</h3>
-              <p>Simulation, ingestion og datalogik.</p>
-            </div>
-            <div class="info-card">
-              <h3>Docker</h3>
-              <p>Kørbare services og isoleret ETL.</p>
-            </div>
-            <div class="info-card">
-              <h3>PostgreSQL</h3>
-              <p>Relationel lagring og analyseklart schema.</p>
-            </div>
-            <div class="info-card">
-              <h3>SQL</h3>
-              <p>Schema, tabeller og views.</p>
-            </div>
-            <div class="info-card">
-              <h3>Power BI</h3>
-              <p>Rapportering, KPI'er og interaktiv analyse.</p>
-            </div>
-            <div class="info-card">
-              <h3>Tabular Editor 2</h3>
-              <p>Semantisk model, DAX og automatisering.</p>
-            </div>
+          <div class="button-row">
+            <a class="button button-primary" href="https://github.com/AbrahimBorgiPrivat/AIRPORT" target="_blank" rel="noreferrer">Open GitHub repo</a>
           </div>
-        </section>
 
-        <section>
-          <h2>Struktur</h2>
           <pre class="repo-tree"><code>AIRPORT/
+|-- .github/
+|   `-- workflows/
 |-- docs/
-|   |-- Abrahim_Borgi_AIRPORT_Simulation_Project.pdf
-|   `-- README.md
 |-- res/
+|   |-- json/
+|   `-- pbi/
+|       |-- img/
+|       `-- theme/
 |-- site/
 |   |-- assets/
-|   `-- *.html
+|   |-- css/
+|   `-- html/
 |-- src/
 |   |-- code/
 |   |   |-- libraries/
+|   |   |   |-- classes/
+|   |   |   |-- packages/
+|   |   |   |-- runners/
+|   |   |   |-- service_specifik/
+|   |   |   `-- utils/
 |   |   |-- runtime_definitions/
+|   |   |   |-- api_to_client/
+|   |   |   |-- create_table_and_views/
+|   |   |   |-- json_to_client/
+|   |   |   `-- simulations/
 |   |   `-- service/
+|   |       `-- etl/
+|   |           |-- service_api_to_client/
+|   |           |-- service_create_table_views_from_sql/
+|   |           |-- service_json_to_client/
+|   |           `-- service_simulations/
 |   `-- workspace-serve/
+|       |-- SemanticModel/
+|       |-- Tabular/
+|       `-- TabularEditorCLITool/
 `-- README.md</code></pre>
         </section>
-
-        <section>
-          <h2>Hvorfor casen virker</h2>
-          <p>
-            AIRPORT demonstrerer ikke bare teknisk kunnen i isolerede bidder. Det viser evnen til at
-            definere et problem, skabe et datagrundlag, bygge en model og levere en rapport, der er
-            brugbar for forretningen.
-          </p>
-          <p>
-            Det er netop kombinationen af realisme, struktur og formidling, der gør projektet
-            interessant som GitHub Pages-site og portfolio-case.
-          </p>
-        </section>
-      </article>
-
-      <aside class="sidebar-column">
-        <div class="sidebar-card">
-          <div class="kicker">Deploy</div>
-          <p>
-            Det nye site bliver deployet som ren static HTML via GitHub Actions og GitHub Pages.
-          </p>
-        </div>
-        <div class="sidebar-card">
-          <div class="kicker">Tilbage til start</div>
-          <div class="button-row">
-            <a class="button button-primary" href="./index.html">Gå til forsiden</a>
-            <a class="button button-secondary" href="../assets/airport-project-report.pdf">Læs PDF</a>
-          </div>
-        </div>
-      </aside>
+      </main>
     </div>
   </div>
 </body>

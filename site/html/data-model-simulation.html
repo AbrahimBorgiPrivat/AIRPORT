@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>AIRPORT | Datamodel og simulation</title>
-  <meta name="description" content="Artikel om datamodellen, de syntetiske data og analysegrundlaget i AIRPORT." />
+  <title>AIRPORT | Datamodel</title>
+  <meta name="description" content="Datamodel og syntetiske data i AIRPORT-projektet." />
   <link rel="stylesheet" href="../css/base.css" />
   <link rel="stylesheet" href="../css/layout.css" />
   <link rel="stylesheet" href="../css/blocks.css" />
@@ -16,124 +16,79 @@
         <img src="../assets/airport-logo.png" alt="Airport logo" />
         <div>
           <div class="brand-title">AIRPORT</div>
-          <div class="brand-subtitle">Static project journal</div>
+          <div class="brand-subtitle">Data og rapportering</div>
         </div>
       </a>
-      <nav class="nav-links" aria-label="Hovednavigation">
-        <a href="./index.html">Forside</a>
-        <a href="./project-purpose.html">Formål</a>
-        <a href="./architecture-pipeline.html">Arkitektur</a>
-        <a class="active" href="./data-model-simulation.html">Datamodel</a>
-        <a href="./power-bi-report.html">Power BI</a>
-        <a href="./technology-repository.html">Teknologi</a>
-      </nav>
+      <div class="topbar-actions">
+        <a class="topbar-link" href="https://abrahimborgiprivat.github.io/Cirkle-K/html/index.html" target="_blank" rel="noreferrer">Circle K</a>
+        <img class="profile-avatar" src="../assets/AbrahimProfilePicture.jpg" alt="Abrahim profile" />
+      </div>
     </header>
 
-    <section class="page-hero">
-      <div class="page-hero-grid">
-        <div>
-          <div class="page-meta">Artikel 03 / Datagrundlag</div>
-          <h1>Datamodel</h1>
-          <p class="lead">
-            Den analytiske styrke i AIRPORT kommer fra måden flights, passports, tickets og reference-
-            data er koblet sammen. Datamodellen er enkel nok til at være overskuelig, men realistisk
-            nok til at understøtte meningsfulde KPI'er.
-          </p>
-        </div>
-        <div class="visual-card">
-          <img src="../assets/semanticmodel.png" alt="Semantisk model for AIRPORT-projektet" />
-        </div>
-      </div>
-    </section>
-
-    <div class="article-layout">
-      <article class="article-body">
-        <section>
-          <h2>Hvorfor syntetiske data</h2>
-          <p>
-            Billet- og passagerdata er ikke hentet fra virkelige passagerer. I stedet bliver de
-            genereret syntetisk ud fra antagelser og fordelinger, der skal afspejle plausible
-            airport-mønstre.
-          </p>
-          <p>
-            Det giver et sikkert og kontrolleret miljø, hvor man kan demonstrere timing, kapacitet
-            og passagerflow uden at kompromittere fortrolige oplysninger.
-          </p>
-        </section>
-
-        <section>
-          <h2>Modeloversigt</h2>
-          <div class="dashboard-card">
-            <img src="../assets/semanticmodel.png" alt="Oversigt over den semantiske model" />
-            <div class="figure-caption">
-              Den semantiske model binder flights, tickets, passports, airports, aircraft models og
-              dateview sammen, så rapporten kan filtrere og analysere på tværs af drift, flow og kapacitet.
-            </div>
-          </div>
-        </section>
-
-        <section>
-          <h2>Tabellerne</h2>
-          <div class="info-grid two">
-            <div class="info-card">
-              <h3><code>PASSPORTS</code></h3>
-              <p>Simulerede passagerer med pasnummer, navn og nationalitet.</p>
-            </div>
-            <div class="info-card">
-              <h3><code>FLIGHTS</code></h3>
-              <p>Afgange med status, tider, gate, terminal, destination og flytype.</p>
-            </div>
-            <div class="info-card">
-              <h3><code>FLIGHT_TICKETS</code></h3>
-              <p>Billetkobling mellem passager og fly med sæde, check-in-type og tidsstempler.</p>
-            </div>
-            <div class="info-card">
-              <h3><code>AIRCRAFT_MODELS</code></h3>
-              <p>Flymetadata som sæder, producent, motor, rækkevidde og kodeværdier.</p>
-            </div>
-            <div class="info-card">
-              <h3><code>AIRPORTS</code></h3>
-              <p>Referenceoplysninger om destinationer og lufthavne.</p>
-            </div>
-            <div class="info-card">
-              <h3><code>DATEVIEW</code></h3>
-              <p>Datodimension til trendanalyse og filtrering over tid.</p>
-            </div>
-          </div>
-        </section>
-
-        <section>
-          <h2>Simulationslogik</h2>
-          <ul>
-            <li>Passagerer får realistiske pasnumre, navne og lande</li>
-            <li>Belægningsgrader varierer efter ugedag og tidspunkt</li>
-            <li>Check-in modelleres som enten <code>online</code> eller <code>onsite</code></li>
-            <li>Security-tider placeres i relation til check-in og planlagt afgang</li>
-            <li>Billetter kobles til flyenes kapacitet via flymodellerne</li>
-          </ul>
-          <p>
-            Resultatet er et sammenhængende datagrundlag, der kan bruges til at måle både
-            passageradfærd og operationel performance.
-          </p>
-        </section>
-      </article>
-
-      <aside class="sidebar-column">
-        <div class="sidebar-card">
-          <div class="kicker">Nøgleidé</div>
-          <p>
-            Datamodellen er ikke kun lavet for at gemme data. Den er lavet for at kunne svare på de
-            spørgsmål, rapporten skal bruge.
-          </p>
-        </div>
-        <div class="sidebar-card">
-          <div class="kicker">Næste artikel</div>
-          <p>Nu giver det mening at kigge på selve rapporten og hvordan KPI'erne bliver præsenteret.</p>
-          <div class="button-row">
-            <a class="button button-primary" href="./power-bi-report.html">Læs Power BI-delen</a>
-          </div>
-        </div>
+    <div class="page-layout">
+      <aside class="side-menu">
+        <h2 class="side-menu-title">Menu</h2>
+        <nav class="side-nav" aria-label="Hovednavigation">
+          <a class="topbar-link" href="./index.html">Forside</a>
+          <a class="topbar-link" href="./project-purpose.html">Formål</a>
+          <a class="topbar-link" href="./architecture-pipeline.html">Pipeline</a>
+          <a class="topbar-link active" href="./data-model-simulation.html">Datamodel</a>
+          <a class="topbar-link" href="./power-bi-report.html">Power BI</a>
+          <a class="topbar-link" href="./technology-repository.html">Repository</a>
+        </nav>
       </aside>
+
+      <main class="content-column">
+        <section class="page-hero">
+          <div class="page-meta">Datamodel</div>
+          <p class="lead">Et enkelt analyseunivers bygget på flights, tickets og passagerdata.</p>
+          <p>
+            Modellen kobler syntetiske passagerer og billetter med flightdata og referencetabeller,
+            så KPI'er for flow, kapacitet og punctualitet kan måles på tværs af hele casen.
+          </p>
+
+          <div class="gallery-grid two">
+            <div class="gallery-card">
+              <img src="../assets/semanticmodel.png" alt="Semantisk model for AIRPORT" />
+              <div class="gallery-copy">
+                <div class="tile-meta">Model</div>
+                <h3>Semantisk struktur</h3>
+                <p>Flights, tickets, passports, airports og dateview.</p>
+              </div>
+            </div>
+            <div class="gallery-card">
+              <img src="../assets/pbi-page-2.png" alt="AIRPORT flow page" />
+              <div class="gallery-copy">
+                <div class="tile-meta">Output</div>
+                <h3>Rapportlogik</h3>
+                <p>Filtrering og KPI'er på tværs af drift og passagerflow.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="section-header">
+            <h2>Kernetabeller</h2>
+          </div>
+
+          <div class="simple-list">
+            <div class="simple-list-item">
+              <div class="tile-meta">Flights</div>
+              <h3>Afgange</h3>
+              <p>Status, tider, destinationer, gate og flytype.</p>
+            </div>
+            <div class="simple-list-item">
+              <div class="tile-meta">Tickets</div>
+              <h3>Passagerkobling</h3>
+              <p>Billetter, sæder, check-in-type og tidsstempler.</p>
+            </div>
+            <div class="simple-list-item">
+              <div class="tile-meta">Referencesæt</div>
+              <h3>Aircraft og airports</h3>
+              <p>Kapacitet, flymetadata og lufthavnsoplysninger.</p>
+            </div>
+          </div>
+        </section>
+      </main>
     </div>
   </div>
 </body>

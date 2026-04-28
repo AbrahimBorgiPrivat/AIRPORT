@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>AIRPORT | Power BI-rapporten</title>
-  <meta name="description" content="Artikel om AIRPORT Power BI-rapporten og de tre dashboardsider." />
+  <title>AIRPORT | Power BI</title>
+  <meta name="description" content="Power BI-siderne i AIRPORT-projektet." />
   <link rel="stylesheet" href="../css/base.css" />
   <link rel="stylesheet" href="../css/layout.css" />
   <link rel="stylesheet" href="../css/blocks.css" />
@@ -16,94 +16,65 @@
         <img src="../assets/airport-logo.png" alt="Airport logo" />
         <div>
           <div class="brand-title">AIRPORT</div>
-          <div class="brand-subtitle">Static project journal</div>
+          <div class="brand-subtitle">Data og rapportering</div>
         </div>
       </a>
-      <nav class="nav-links" aria-label="Hovednavigation">
-        <a href="./index.html">Forside</a>
-        <a href="./project-purpose.html">Formål</a>
-        <a href="./architecture-pipeline.html">Arkitektur</a>
-        <a href="./data-model-simulation.html">Datamodel</a>
-        <a class="active" href="./power-bi-report.html">Power BI</a>
-        <a href="./technology-repository.html">Teknologi</a>
-      </nav>
+      <div class="topbar-actions">
+        <a class="topbar-link" href="https://abrahimborgiprivat.github.io/Cirkle-K/html/index.html" target="_blank" rel="noreferrer">Circle K</a>
+        <img class="profile-avatar" src="../assets/AbrahimProfilePicture.jpg" alt="Abrahim profile" />
+      </div>
     </header>
 
-    <section class="page-hero">
-      <div class="page-hero-grid">
-        <div>
-          <div class="page-meta">Artikel 04 / Rapporten</div>
-          <h1>Power BI</h1>
-          <p class="lead">
-            Rapporten er opdelt i tre sider med hver sit fokus: operationelt overblik, passagerflow
-            og kapacitetsudnyttelse. Sammen fortæller de historien om, hvordan lufthavnen performer.
-          </p>
-        </div>
-        <div class="visual-card">
-          <img src="../assets/pbi-page-3.png" alt="Kapacitet og udnyttelse" />
-        </div>
-      </div>
-    </section>
-
-    <div class="article-layout">
-      <article class="article-body">
-        <section>
-          <h2>Overblik</h2>
-          <div class="dashboard-card">
-            <img src="../assets/pbi-page-1.png" alt="Power BI side 1" />
-            <div class="dashboard-copy">
-              <p>
-                Første side samler nøgletal om passagerer, fly, punctualitet, destinationer og
-                belastning over tid. Den fungerer som ledelsesoverblik og entry point til rapporten.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section>
-          <h2>Passagerflow</h2>
-          <div class="dashboard-card">
-            <img src="../assets/pbi-page-2.png" alt="Power BI side 2" />
-            <div class="dashboard-copy">
-              <p>
-                Anden side analyserer check-in, security og passagerernes timing frem mod afgang.
-                Det giver indblik i flaskehalse, ankomstmønstre og forskelle mellem online og onsite.
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section>
-          <h2>Kapacitet</h2>
-          <div class="dashboard-card">
-            <img src="../assets/pbi-page-3.png" alt="Power BI side 3" />
-            <div class="dashboard-copy">
-              <p>
-                Tredje side viser, hvor godt flyenes kapacitet bliver brugt på tværs af selskaber,
-                flystørrelser, områder og datoer. Seat-layoutet gør udnyttelsen intuitiv at aflæse.
-              </p>
-            </div>
-          </div>
-        </section>
-      </article>
-
-      <aside class="sidebar-column">
-        <div class="sidebar-card">
-          <div class="kicker">Rapportens styrke</div>
-          <ul>
-            <li>Ensartet tema og layout</li>
-            <li>Tydelig opdeling af analysetemaer</li>
-            <li>KPI'er, trends og drilldown i samme oplevelse</li>
-          </ul>
-        </div>
-        <div class="sidebar-card">
-          <div class="kicker">Næste artikel</div>
-          <p>Den sidste artikel samler teknologierne, repository-strukturen og projektets samlede styrke.</p>
-          <div class="button-row">
-            <a class="button button-primary" href="./technology-repository.html">Læs teknologier</a>
-          </div>
-        </div>
+    <div class="page-layout">
+      <aside class="side-menu">
+        <h2 class="side-menu-title">Menu</h2>
+        <nav class="side-nav" aria-label="Hovednavigation">
+          <a class="topbar-link" href="./index.html">Forside</a>
+          <a class="topbar-link" href="./project-purpose.html">Formål</a>
+          <a class="topbar-link" href="./architecture-pipeline.html">Pipeline</a>
+          <a class="topbar-link" href="./data-model-simulation.html">Datamodel</a>
+          <a class="topbar-link active" href="./power-bi-report.html">Power BI</a>
+          <a class="topbar-link" href="./technology-repository.html">Repository</a>
+        </nav>
       </aside>
+
+      <main class="content-column">
+        <section class="page-hero">
+          <div class="page-meta">Power BI</div>
+          <p class="lead">Tre sider med hver sit fokus i airport-driften.</p>
+          <p>
+            Rapporten er bygget som et kort visuelt forløb med overblik, passagerflow og kapacitet,
+            så de vigtigste operationelle spørgsmål kan læses hurtigt.
+          </p>
+
+          <div class="gallery-grid">
+            <div class="gallery-card">
+              <img src="../assets/pbi-page-1.png" alt="AIRPORT Power BI side 1" />
+              <div class="gallery-copy">
+                <div class="tile-meta">Side 01</div>
+                <h3>Overblik</h3>
+                <p>Passagerer, fly, trends og puntualitet.</p>
+              </div>
+            </div>
+            <div class="gallery-card">
+              <img src="../assets/pbi-page-2.png" alt="AIRPORT Power BI side 2" />
+              <div class="gallery-copy">
+                <div class="tile-meta">Side 02</div>
+                <h3>Passagerflow</h3>
+                <p>Check-in, security og timing frem mod afgang.</p>
+              </div>
+            </div>
+            <div class="gallery-card">
+              <img src="../assets/pbi-page-3.png" alt="AIRPORT Power BI side 3" />
+              <div class="gallery-copy">
+                <div class="tile-meta">Side 03</div>
+                <h3>Kapacitet</h3>
+                <p>Sædeudnyttelse på tværs af selskaber og flytyper.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
     </div>
   </div>
 </body>
